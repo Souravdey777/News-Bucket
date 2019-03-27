@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import SingleArticle from '../singleArticle/singleArticle';
 import StackGrid from "react-stack-grid";
-import ReactLoading from "react-loading";
 import ClassNames from "./allArticles.module.css";
 
 class AllArticles extends React.Component {
