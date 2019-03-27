@@ -1,0 +1,6 @@
+.App {
+  text-align: center; 
+  background: rgb(255,194,204);
+  background: linear-gradient(348deg, rgba(255,194,204,1) 0%, rgba(243,255,132,1) 16%, rgba(115,239,247,1) 26%, rgba(237,214,255,1) 39%, rgba(171,255,224,1) 53%, rgba(255,175,175,1) 75%, rgba(159,255,237,1) 86%, rgba(210,255,106,1) 100%);
+  padding: 12px;
+}
