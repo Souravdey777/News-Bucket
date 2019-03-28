@@ -4,6 +4,7 @@ import logo from '../../assets/images/SummerizeLogo.png';
 import SearchingInput from './searchingInput/searchingInput';
 import MenuLogo from './menulogo/menulogo';
 class Header extends Component {
+
     render() {
         return (
             <header className={ClassNames.header}>

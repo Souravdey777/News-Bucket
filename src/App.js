@@ -4,6 +4,12 @@ import AllArticles from './components/allArticles/allArticles';
 import Header from './components/header/header';
 
 class App extends Component {
+  state = {
+    articles: [],
+    error:false,
+    query:null,
+  }
+  
   render() {
     return (
       <div className="App">

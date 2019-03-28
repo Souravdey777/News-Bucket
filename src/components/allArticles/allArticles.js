@@ -6,21 +6,25 @@ import ClassNames from "./allArticles.module.css";
 import ReactLoading from "react-loading";
 import NoNetwork from '../../assets/images/NoNetwork.png';
 class AllArticles extends React.Component {
-  state = {
-    articles: [],
-    error:false,
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+    this.handleChange = this.handleChange.bind(this);
   }
-
-
   getNews=articles=>{
     this.setState({ articles: articles });
+  }
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+    console.log(this.state.value);
   }
 
   componentDidMount() {
     axios
       .get('https://newsapi.org/v2/top-headlines?' +
         'country=us&'+
-        'pageSize=40&'+
+        'pageSize=60&'+
         'apiKey=1fe94e1f7eb747b3a5879a48ba736409')
       .then(response => {
         const articles = response.data.articles;

@@ -27,13 +27,12 @@
 
 
   .searchlogo{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-    padding-right:  21px;
-    width: 14px;
+    padding: 8px;
+    padding-right: 10px;
+    width: 16px;
     height: auto;
     align-items: center;
+    border-left: #777a solid 0.2px;
   }
 
 
