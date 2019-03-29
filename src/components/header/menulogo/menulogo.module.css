@@ -16,7 +16,7 @@
         background-color: #333;
 }
 @media(max-width: 629px){
-    .circle1{
-        display: none;
+    .circle2{
+        background-color: transparent;
     }
 }

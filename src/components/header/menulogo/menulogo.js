@@ -12,9 +12,9 @@ class MenuLogo extends React.Component {
                     <div className={Classnames.circle1}/>
                 </div>
                 <div>
-                    <div className={Classnames.circle1}/>
-                    <div className={Classnames.circle1}/>
-                    <div className={Classnames.circle1}/>
+                    <div className={Classnames.circle2}/>
+                    <div className={Classnames.circle2}/>
+                    <div className={Classnames.circle2}/>
                 </div>
                 <div>
                     <div className={Classnames.circle2}/>

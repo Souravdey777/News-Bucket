@@ -5,42 +5,53 @@ import StackGrid from "react-stack-grid";
 import ClassNames from "./allArticles.module.css";
 import ReactLoading from "react-loading";
 import NoNetwork from '../../assets/images/NoNetwork.png';
+import Header from '../header/header';
 class AllArticles extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-    this.handleChange = this.handleChange.bind(this);
+  state = {
+    key:`1fe94e1f7eb747b3a5879a48ba736409`,
+    articles: [],
+    error:false,
+    query:null,
+    url:'https://newsapi.org/v2/top-headlines?country=in&apiKey=1fe94e1f7eb747b3a5879a48ba736409'
   }
-  getNews=articles=>{
-    this.setState({ articles: articles });
+  
+  getNews=(url)=>{axios
+    .get(url)
+    .then(response => {
+      const articles = response.data.articles;
+      console.log(articles);
+      this.setState({ articles: articles });
+    })
+    .catch(error => {
+      console.log(error);
+      this.setState({ error: error });
+    });
   }
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-    console.log(this.state.value);
+  
+  componentWillMount() {
+    this.getNews(this.state.url);
   }
 
-  componentDidMount() {
-    axios
-      .get('https://newsapi.org/v2/top-headlines?' +
-        'country=us&'+
-        'pageSize=60&'+
-        'apiKey=1fe94e1f7eb747b3a5879a48ba736409')
-      .then(response => {
-        const articles = response.data.articles;
-        console.log(articles);
-        this.getNews(articles);
-      })
-      .catch(error => {
-        console.log(error);
-        this.setState({ error: error });
-      });
+  handleChange=(event)=> {
+    console.log(event.target.value);
+    this.setState({query: event.target.value});
+    console.log(this.state.query);
+    this.setState({url:`https://newsapi.org/v2/everything?q=${this.state.query}&language=en&apiKey=1fe94e1f7eb747b3a5879a48ba736409`})
+
+    this.getNews(this.state.url);
+    console.log(this.state.url);
   }
+
+
+
+    Query(){
+      
+    }
 
   render() {
     const articleState = this.state.articles;
-    let result = this.state.error?<p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt = 'Summerize'/>News can't be loaded<br/>Network Issue</p>:<div className={ClassNames.loadingpage}>Loading...<br/><ReactLoading type="bubbles" color="#777" /></div>;
-    if (articleState && articleState.length > 2){
+    let result = this.state.error?<p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt = 'Summerize'/>News can't be loaded</p>:<div className={ClassNames.loadingpage}>Loading...<br/><ReactLoading type="bubbles" color="#777" /></div>;
+    if (articleState && articleState.length > 1){
       result =<StackGrid
       columnWidth={300}
       monitorImagesLoaded={true}>
@@ -50,9 +61,13 @@ class AllArticles extends React.Component {
     </StackGrid>
     }
     return (
+      <div>
+        <Header clicked={this.Query} value={this.state.query} handleChange={this.handleChange} />
       <div className={ClassNames.body}>
       {result}
       </div>
+      </div>
+      
 
     );
   }

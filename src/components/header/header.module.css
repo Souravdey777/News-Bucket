@@ -19,13 +19,19 @@
     height: 32px;
     border-radius: 4px;
 }
+.logoname{
+    color: #ff3333;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 
 @media(max-width: 629px){
     .header{
         display: flex;
     }
-    .headerpart{
-        padding: 10px;
+    .logoname{
+        display: none;
     }
 }
