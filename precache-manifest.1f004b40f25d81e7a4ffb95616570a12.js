@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/News-Bucket/static/js/runtime~main.ad0a51bb.js"
   },
   {
-    "revision": "1dd936bbd8a89366f2fa",
-    "url": "/News-Bucket/static/js/main.630f2c11.chunk.js"
+    "revision": "9edafd2d89d6919cc125",
+    "url": "/News-Bucket/static/js/main.b81a0a78.chunk.js"
   },
   {
-    "revision": "289bf58832dbf4ce40c9",
-    "url": "/News-Bucket/static/js/2.c8b4a9f6.chunk.js"
+    "revision": "1126b4cb4e4273e4a34c",
+    "url": "/News-Bucket/static/js/2.3596909d.chunk.js"
   },
   {
-    "revision": "1dd936bbd8a89366f2fa",
+    "revision": "9edafd2d89d6919cc125",
     "url": "/News-Bucket/static/css/main.0a99b57f.chunk.css"
   },
   {
-    "revision": "47ebf7b139e0b9d5801870295be92dde",
+    "revision": "c65ed3f9f04a0e3a458d3250e863fb1d",
     "url": "/News-Bucket/index.html"
   }
 ];
