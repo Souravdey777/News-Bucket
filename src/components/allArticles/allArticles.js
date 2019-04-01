@@ -8,11 +8,10 @@ import NoNetwork from '../../assets/images/NoNetwork.png';
 import Header from '../header/header';
 class AllArticles extends React.Component {
   state = {
-    key: `1fe94e1f7eb747b3a5879a48ba736409`,
     articles: [],
     error: false,
     query: '',
-    url: 'https://newsapi.org/v2/top-headlines?country=in&apiKey=1fe94e1f7eb747b3a5879a48ba736409'
+    url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=7de4507ef58c4118be7684e320da6328'
   }
 
   getNews = (url) => {
@@ -37,13 +36,13 @@ class AllArticles extends React.Component {
     console.log(event.target.value);
     this.setState({ query: event.target.value }, () => {
       console.log(this.state.query);
-      this.setState({ url: `https://newsapi.org/v2/everything?q=${this.state.query}&language=en&apiKey=1fe94e1f7eb747b3a5879a48ba736409` }, () => {
+      this.setState({ url: `https://newsapi.org/v2/everything?q=${this.state.query}&language=en&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
     });
     if(event.target.value===''){
-      this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&apiKey=1fe94e1f7eb747b3a5879a48ba736409' }, () => {
+      this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
@@ -54,11 +53,10 @@ class AllArticles extends React.Component {
 
   render() {
     const articleState = this.state.articles;
-    let result = this.state.error ? <p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded <br/>{this.state.error}</p> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
+    let result = this.state.error ? <p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded</p> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
     if (articleState && articleState.length > 1) {
       result = <StackGrid
         columnWidth={300}
-        appearDelay={100}
         monitorImagesLoaded={true}>
         {this.state.articles.map((arg, i) => {
           return <SingleArticle key={i} articles={arg} />;
@@ -67,7 +65,7 @@ class AllArticles extends React.Component {
     }
     return (
       <div>
-        <Header value={this.state.query} handleChange={this.handleChange} />
+        <Header clicked={this.Query} value={this.state.query} handleChange={this.handleChange} />
         <div className={ClassNames.body}>
           {result}
         </div>
