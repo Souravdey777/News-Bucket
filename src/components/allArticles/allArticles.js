@@ -11,7 +11,7 @@ class AllArticles extends React.Component {
     articles: [],
     error: false,
     query: '',
-    url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=7de4507ef58c4118be7684e320da6328'
+    url: 'https://newsapi.org/v2/top-headlines?country=us&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328'
   }
 
   getNews = (url) => {
@@ -36,13 +36,13 @@ class AllArticles extends React.Component {
     console.log(event.target.value);
     this.setState({ query: event.target.value }, () => {
       console.log(this.state.query);
-      this.setState({ url: `https://newsapi.org/v2/everything?q=${this.state.query}&language=en&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+      this.setState({ url: `https://newsapi.org/v2/everything?q=${this.state.query}&language=en&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
     });
     if(event.target.value===''){
-      this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
+      this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
