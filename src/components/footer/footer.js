@@ -9,7 +9,7 @@ class Footer extends Component {
         return (
             <footer className={ClassNames.footer}>
                 <div className={ClassNames.name}>SUMMARIZE : THE NEWS WEBSITE</div>
-                <a  target='_blank' href='https://github.com/Souravdey777/News-Bucket/tree/master'
+                <a  rel="noopener noreferrer" target='_blank' href='https://github.com/Souravdey777/News-Bucket/tree/master'
                  style={{ textDecoration: 'none', color: 'black' }}>
                     <div className={ClassNames.githublink}>
                         <img className={ClassNames.githublogo} src={githublogo} alt="Source code" />
@@ -17,7 +17,7 @@ class Footer extends Component {
                 </a>
                 <div>
                     <div className={ClassNames.text}>Developed by <a href='#' >Sourav Dey</a></div>
-                    <div className={ClassNames.text}>Powered by <a target='_blank' href='https://newsapi.org/' >Newsapi.org</a></div>
+                    <div className={ClassNames.text}>Powered by <a rel="noopener noreferrer" target='_blank' href='https://newsapi.org/' >Newsapi.org</a></div>
                 </div>
             </footer>
         );

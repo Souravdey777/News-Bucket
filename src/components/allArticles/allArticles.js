@@ -6,7 +6,6 @@ import ClassNames from "./allArticles.module.css";
 import ReactLoading from "react-loading";
 import NoNetwork from '../../assets/images/NoNetwork.png';
 import Header from '../header/header';
-import Footer from '../footer/footer';
 class AllArticles extends React.Component {
   state = {
     articles: [],
