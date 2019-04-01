@@ -26,15 +26,6 @@
   }
 
 
-  .searchlogo{
-    padding: 8px;
-    padding-right: 10px;
-    width: 16px;
-    height: auto;
-    align-items: center;
-    border-left: #777a solid 0.2px;
-  }
-
 
   @media(max-width: 629px){
     .textbox{

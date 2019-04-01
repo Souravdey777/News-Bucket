@@ -9,16 +9,17 @@
     z-index: 500;
     top:0;
     left: 0;
-    padding: 0px 0px 0px 10px;;
     background-color: white;
     border-bottom: 0.5px solid rgba(0,0,0,0.2);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
 .image {
     width: 32px;
     height: 32px;
     border-radius: 4px;
 }
+
 .logoname{
     color: #ff3333;
     font-weight: bold;

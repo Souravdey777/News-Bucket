@@ -54,10 +54,11 @@ class AllArticles extends React.Component {
 
   render() {
     const articleState = this.state.articles;
-    let result = this.state.error ? <p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded</p> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
+    let result = this.state.error ? <p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded <br/>{this.state.error}</p> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
     if (articleState && articleState.length > 1) {
       result = <StackGrid
         columnWidth={300}
+        appearDelay={100}
         monitorImagesLoaded={true}>
         {this.state.articles.map((arg, i) => {
           return <SingleArticle key={i} articles={arg} />;
@@ -66,7 +67,7 @@ class AllArticles extends React.Component {
     }
     return (
       <div>
-        <Header clicked={this.Query} value={this.state.query} handleChange={this.handleChange} />
+        <Header value={this.state.query} handleChange={this.handleChange} />
         <div className={ClassNames.body}>
           {result}
         </div>

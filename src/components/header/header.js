@@ -11,7 +11,7 @@ class Header extends Component {
             <header className={ClassNames.header}>
                 <img className={ClassNames.image} src={logo} alt = 'Summarize'/>
                 <div className={ClassNames.logoname}>SUMMARIZE</div>
-                <SearchingInput clicked={this.props.clicked} value={this.props.value} handleChange={this.props.handleChange}/>
+                <SearchingInput value={this.props.value} handleChange={this.props.handleChange}/>
                 <MenuLogo/>
             </header>
         );
