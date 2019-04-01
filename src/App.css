@@ -1,6 +1,5 @@
 .App {
   text-align: center; 
-  padding: 12px;
   width: 100%;
   height: 100%;
   background: rgb(148,241,124);
@@ -11,8 +10,3 @@
   user-select: none;          /* Likely future */ 
 }
 
-@media(max-width: 629px){
-  .App{
-    padding: 5px;
-  }
-}

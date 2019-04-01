@@ -6,6 +6,7 @@ import ClassNames from "./allArticles.module.css";
 import ReactLoading from "react-loading";
 import NoNetwork from '../../assets/images/NoNetwork.png';
 import Header from '../header/header';
+import Footer from '../footer/footer';
 class AllArticles extends React.Component {
   state = {
     articles: [],
@@ -17,15 +18,15 @@ class AllArticles extends React.Component {
   getNews = (url) => {
     axios
       .get(url)
-    .then(response => {
-      const articles = response.data.articles;
-      console.log(articles);
-      this.setState({ articles: articles });
-    })
-    .catch(error => {
-      console.log(error);
-      this.setState({ error: error });
-    });
+      .then(response => {
+        const articles = response.data.articles;
+        console.log(articles);
+        this.setState({ articles: articles });
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState({ error: error });
+      });
   }
 
   componentDidMount() {
@@ -41,7 +42,7 @@ class AllArticles extends React.Component {
         this.getNews(this.state.url);
       });
     });
-    if(event.target.value===''){
+    if (event.target.value === '') {
       this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
@@ -63,15 +64,13 @@ class AllArticles extends React.Component {
         })}
       </StackGrid>
     }
-    else if(articleState.length === 0 && this.state.query!==''){
-      result=<p className={ClassNames.loadingpage}>No Search Result Found</p>
+    else if (articleState.length === 0 && this.state.query !== '') {
+      result = <p className={ClassNames.loadingpage}>No Search Result Found</p>
     }
     return (
-      <div>
+      <div className={ClassNames.body}>
         <Header clicked={this.Query} value={this.state.query} handleChange={this.handleChange} />
-        <div className={ClassNames.body}>
-          {result}
-        </div>
+        {result}
       </div>
 
 

@@ -1,4 +1,5 @@
 .body{
+    padding: 12px;
     padding-top: 60px;
 }
 .loadingpage{
@@ -25,5 +26,9 @@
     .loadingpage{
     font-size: 20px;
     font-weight: bolder;
+    }
+    .body{
+        padding: 5px;
+        padding-top: 65px;
     }
   }
