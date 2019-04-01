@@ -28,7 +28,7 @@ class AllArticles extends React.Component {
     });
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getNews(this.state.url);
   }
 
@@ -62,6 +62,9 @@ class AllArticles extends React.Component {
           return <SingleArticle key={i} articles={arg} />;
         })}
       </StackGrid>
+    }
+    else if(articleState.length === 0 && this.state.query!==''){
+      result=<p className={ClassNames.loadingpage}>No Search Result Found</p>
     }
     return (
       <div>
