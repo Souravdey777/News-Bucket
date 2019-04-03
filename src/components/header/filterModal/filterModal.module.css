@@ -1,5 +1,6 @@
 .modal{
-    display: block;
+    display: flex;
+    flex-flow: column;
     position: fixed;
     top: 45px;
     right: 20px;
@@ -8,32 +9,82 @@
     height: auto;
     border: 0.7px solid #ccc;
     z-index: 2000;
-    box-shadow: 0px 4px 15px #ccc;
+    box-shadow: 0px 4px 15px #000;
     background-color: white;
     border-radius: 2px;
-    padding: 30px;
+    padding: 30px ;
 }
 
 
-.modal a{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 84px;
-    height: 84px;
-    margin: 8px 2px;
-    border: 0.5px solid transparent;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px; 
-    letter-spacing: normal;
-    font-stretch: 100%;
-    text-decoration: none;
-    transition-duration: 100ms;
-}
-.modal a:hover{
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
-    transition-duration: 100ms;
-}
 
+
+
+.custom_dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+  }
+  
+  .custom_dropdown select {
+    outline: none;
+    border-radius: 20px;
+    color: #777;
+    font-size: 15px;
+    padding: .5em;
+    padding-left: 1em;	
+    padding-right: 10em;	
+    border: 1px solid #ccc;
+    margin: 0;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button;
+  }
+  
+  .custom_dropdown::before,
+  .custom_dropdown::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .custom_dropdown::after { 
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.5em;
+  }
+  
+  .custom_dropdown::before { 
+    width: 1.8em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 20px 20px 0;
+    border-left: 1px solid #ccc;
+  }
+  
+  .custom_dropdown select[disabled] {
+    color: rgba(0,0,0,.3);
+  }
+  
+  .custom_dropdown select[disabled]::after {
+    color: rgba(0,0,0,.1);
+  }
+  
+  .custom_dropdown::before {
+    background-color: rgba(0,0,0,.15);
+  }
+  
+  .custom_dropdown::after {
+    color: rgba(0,0,0,.4);
+  }
+
+  @media(max-width: 629px){
+    .custom_dropdown select{
+        padding-right: 4em;
+    }
+  }

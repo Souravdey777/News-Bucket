@@ -1,6 +1,5 @@
 import React from 'react';
 import Classnames from './searchingInput.module.css';
-
 const SearchingInput = (props) =>
 
     <div className={Classnames.SearchingInput}>

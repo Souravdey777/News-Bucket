@@ -24,7 +24,7 @@ class Header extends Component {
                 <SearchingInput value={this.props.value} handleChange={this.props.handleChange}/>
                 <div onClick={this.handleShow}><MenuLogo /></div>
             </header>
-            {this.state.show?<FilterModal show={this.state.show} backdropClicked={this.handleShow}/>:null}
+            {this.state.show?<FilterModal selectedValue={this.props.selectedValue} handleChange={this.props.handleDropdownChange} show={this.state.show} backdropClicked={this.handleShow}/>:null}
             </div>
         );
     }

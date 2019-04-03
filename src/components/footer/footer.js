@@ -16,7 +16,7 @@ class Footer extends Component {
                     </div>
                 </a>
                 <div>
-                    <div className={ClassNames.text}>Developed by <a href='#' >Sourav Dey</a></div>
+                    <div className={ClassNames.text}>Developed by <a href='/#' >Sourav Dey</a></div>
                     <div className={ClassNames.text}>Powered by <a rel="noopener noreferrer" target='_blank' href='https://newsapi.org/' >Newsapi.org</a></div>
                 </div>
             </footer>

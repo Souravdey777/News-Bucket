@@ -11,7 +11,9 @@ class AllArticles extends React.Component {
     articles: [],
     error: false,
     query: '',
-    url: 'https://newsapi.org/v2/top-headlines?country=us&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328'
+    loadingcheck: true,
+    CategoryValue: 'general',
+    url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328'
   }
 
   getNews = (url) => {
@@ -21,6 +23,7 @@ class AllArticles extends React.Component {
         const articles = response.data.articles;
         console.log(articles);
         this.setState({ articles: articles });
+        this.setState({loadingcheck:true});
       })
       .catch(error => {
         console.log(error);
@@ -33,15 +36,16 @@ class AllArticles extends React.Component {
   }
 
   handleChange = (event) => {
+    this.setState({loadingcheck:false});
     console.log(event.target.value);
     this.setState({ query: event.target.value }, () => {
       console.log(this.state.query);
-      this.setState({ url: `https://newsapi.org/v2/everything?q=${this.state.query}&language=en&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&q=${this.state.query}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
     });
-    if (event.target.value === '') {
+    if (this.state.query === '') {
       this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
@@ -51,10 +55,31 @@ class AllArticles extends React.Component {
   }
 
 
+
+  handleDropdownChange=(event)=>{
+    this.setState({loadingcheck:false});
+    console.log(event.target.value);
+    this.setState({ CategoryValue: event.target.value}, () => {
+        console.log(this.state.CategoryValue);
+        this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&q=${this.state.query}&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+          console.log(this.state.url);
+          this.getNews(this.state.url);
+        });
+      });
+      if (this.state.query === '') {
+        this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+          console.log(this.state.url);
+          this.getNews(this.state.url);
+        });
+      }
+
+  }
+
+
   render() {
     const articleState = this.state.articles;
     let result = this.state.error ? <p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded</p> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
-    if (articleState && articleState.length > 1) {
+    if (articleState && articleState.length > 1 && this.state.loadingcheck) {
       result = <StackGrid
         columnWidth={300}
         monitorImagesLoaded={true}>
@@ -68,7 +93,7 @@ class AllArticles extends React.Component {
     }
     return (
       <div className={ClassNames.body}>
-        <Header clicked={this.Query} value={this.state.query} handleChange={this.handleChange} />
+        <Header selectedValue={this.state.CategoryValue} handleDropdownChange={this.handleDropdownChange} value={this.state.query} handleChange={this.handleChange} />
         {result}
       </div>
 
