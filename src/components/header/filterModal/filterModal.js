@@ -25,7 +25,7 @@ const FilterModal = props => {
                         value={props.selectedValueCountry}
                         onChange={props.handleChangeCountry}>
                         <option value="in">India</option>
-                        <option value="us">USA</option>
+                        <option value="us">US</option>
                     </select>
                 </div>
             </div>

@@ -12,6 +12,7 @@ class AllArticles extends React.Component {
     error: false,
     query: '',
     loadingcheck: true,
+    CountryValue: 'in',
     CategoryValue: 'general',
     url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328'
   }
@@ -38,14 +39,14 @@ class AllArticles extends React.Component {
     this.setState({ loadingcheck: false });
     this.setState({ query: event.target.value }, () => {
       console.log(this.state.query);
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&q=${this.state.query}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&q=${this.state.query}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
     });
 
     if (this.state.query === '') {
-      this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
@@ -55,17 +56,28 @@ class AllArticles extends React.Component {
 
 
 
-  handleDropdownChange = (event) => {
+  handleCategoryDropdownChange = (event) => {
     this.setState({ loadingcheck: false });
     console.log(event.target.value);
     this.setState({ CategoryValue: event.target.value }, () => {
       console.log(this.state.CategoryValue);
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
         console.log(this.state.url);
         this.getNews(this.state.url);
       });
     });
+  }
 
+  handleCountryDropdownChange= (event) => {
+    this.setState({ loadingcheck: false });
+    console.log(event.target.value);
+    this.setState({ CountryValue: event.target.value }, () => {
+      console.log(this.state.CountryValue);
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+        console.log(this.state.url);
+        this.getNews(this.state.url);
+      });
+    });
   }
 
 
@@ -86,7 +98,13 @@ class AllArticles extends React.Component {
     }
     return (
       <div className={ClassNames.body}>
-        <Header selectedValue={this.state.CategoryValue} handleDropdownChange={this.handleDropdownChange} value={this.state.query} handleChange={this.handleChange} />
+        <Header
+          selectedValueCountry={this.props.CountryValue}
+          handleChangeCountry={this.handleCountryDropdownChange}
+          selectedValue={this.state.CategoryValue}
+          handleDropdownChange={this.handleCategoryDropdownChange}
+          value={this.state.query}
+          handleChange={this.handleChange} />
         {result}
       </div>
 
