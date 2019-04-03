@@ -22,8 +22,7 @@ class AllArticles extends React.Component {
       .then(response => {
         const articles = response.data.articles;
         console.log(articles);
-        this.setState({ articles: articles });
-        this.setState({loadingcheck:true});
+        this.setState({ articles: articles, loadingcheck: true });
       })
       .catch(error => {
         console.log(error);
@@ -36,8 +35,7 @@ class AllArticles extends React.Component {
   }
 
   handleChange = (event) => {
-    this.setState({loadingcheck:false});
-    console.log(event.target.value);
+    this.setState({ loadingcheck: false });
     this.setState({ query: event.target.value }, () => {
       console.log(this.state.query);
       this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&q=${this.state.query}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
@@ -45,6 +43,7 @@ class AllArticles extends React.Component {
         this.getNews(this.state.url);
       });
     });
+
     if (this.state.query === '') {
       this.setState({ url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328' }, () => {
         console.log(this.state.url);
@@ -56,22 +55,16 @@ class AllArticles extends React.Component {
 
 
 
-  handleDropdownChange=(event)=>{
-    this.setState({loadingcheck:false});
+  handleDropdownChange = (event) => {
+    this.setState({ loadingcheck: false });
     console.log(event.target.value);
-    this.setState({ CategoryValue: event.target.value}, () => {
-        console.log(this.state.CategoryValue);
-        this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&q=${this.state.query}&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
-          console.log(this.state.url);
-          this.getNews(this.state.url);
-        });
+    this.setState({ CategoryValue: event.target.value }, () => {
+      console.log(this.state.CategoryValue);
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+        console.log(this.state.url);
+        this.getNews(this.state.url);
       });
-      if (this.state.query === '') {
-        this.setState({ url: `https://newsapi.org/v2/top-headlines?country=in&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
-          console.log(this.state.url);
-          this.getNews(this.state.url);
-        });
-      }
+    });
 
   }
 
