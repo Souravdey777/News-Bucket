@@ -10,19 +10,21 @@ class AllArticles extends React.Component {
   state = {
     articles: [],
     error: false,
+    toquery: '',
+    forCategory: '',
+    forCountry: 'country=in',
     query: '',
     loadingcheck: true,
     CountryValue: 'in',
     CategoryValue: 'general',
-    url: 'https://newsapi.org/v2/top-headlines?country=in&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328'
   }
 
-  getNews = (url) => {
+  getNews = () => {
     axios
-      .get(url)
+      .get(`https://newsapi.org/v2/top-headlines?${this.state.forCountry}${this.state.toquery}${this.state.forCategory}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328`)
       .then(response => {
         const articles = response.data.articles;
-        console.log(articles);
+        console.log();
         this.setState({ articles: articles, loadingcheck: true });
       })
       .catch(error => {
@@ -32,23 +34,23 @@ class AllArticles extends React.Component {
   }
 
   componentDidMount() {
-    this.getNews(this.state.url);
+    this.getNews();
   }
 
   handleChange = (event) => {
     this.setState({ loadingcheck: false });
     this.setState({ query: event.target.value }, () => {
       console.log(this.state.query);
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&q=${this.state.query}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
-        console.log(this.state.url);
-        this.getNews(this.state.url);
+      this.setState({ toquery: `&q=${this.state.query}` }, () => {
+        console.log(this.state.toquery);
+        this.getNews();
       });
     });
 
     if (this.state.query === '') {
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
+      this.setState({ toquery: '' }, () => {
         console.log(this.state.url);
-        this.getNews(this.state.url);
+        this.getNews();
       });
     }
 
@@ -61,21 +63,21 @@ class AllArticles extends React.Component {
     console.log(event.target.value);
     this.setState({ CategoryValue: event.target.value }, () => {
       console.log(this.state.CategoryValue);
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
-        console.log(this.state.url);
-        this.getNews(this.state.url);
+      this.setState({ forCategory: `&category=${this.state.CategoryValue}` }, () => {
+        console.log(this.state.forCategory);
+        this.getNews();
       });
     });
   }
 
-  handleCountryDropdownChange= (event) => {
+  handleCountryDropdownChange = (event) => {
     this.setState({ loadingcheck: false });
     console.log(event.target.value);
     this.setState({ CountryValue: event.target.value }, () => {
       console.log(this.state.CountryValue);
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${this.state.CountryValue}&category=${this.state.CategoryValue}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328` }, () => {
-        console.log(this.state.url);
-        this.getNews(this.state.url);
+      this.setState({ forCountry: `country=${this.state.CountryValue}` }, () => {
+        console.log(this.state.forCountry);
+        this.getNews();
       });
     });
   }
