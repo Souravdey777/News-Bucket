@@ -26,8 +26,8 @@ class Header extends Component {
                     <div onClick={this.handleShow}><FilterModal
                         selectedValueCountry={this.props.selectedValueCountry}
                         handleChangeCountry={this.props.handleChangeCountry}
-                        selectedValue={this.props.selectedValue}
-                        handleChange={this.props.handleDropdownChange} /></div>
+                        selectedValueCategory={this.props.selectedValueCategory}
+                        handleChangeCategory={this.props.handleCategoryChange} /></div>
                 </header>
             </div>
         );

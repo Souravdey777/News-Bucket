@@ -19,7 +19,7 @@
     color: #777;
     background-color: white;
     font: 14px arial,sans-serif;
-    width: 80px;
+    width: 100px;
     height: 32px;
     padding-left: 1em;	
     margin: 0;
@@ -34,17 +34,6 @@
     pointer-events: none;
   }
 
-  .custom_dropdown select[disabled] {
-  }
-  
-  .custom_dropdown select[disabled]::after {
-  }
-  
-  .custom_dropdown::before {
-  }
-  
-  .custom_dropdown::after {
-  }
 
   @media(max-width: 629px){
     .custom_dropdown select{

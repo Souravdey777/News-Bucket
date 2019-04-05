@@ -103,8 +103,8 @@ class AllArticles extends React.Component {
         <Header
           selectedValueCountry={this.props.CountryValue}
           handleChangeCountry={this.handleCountryDropdownChange}
-          selectedValue={this.state.CategoryValue}
-          handleDropdownChange={this.handleCategoryDropdownChange}
+          selectedValueCategory={this.state.CategoryValue}
+          handleCategoryChange={this.handleCategoryDropdownChange}
           value={this.state.query}
           handleChange={this.handleChange} />
         {result}
