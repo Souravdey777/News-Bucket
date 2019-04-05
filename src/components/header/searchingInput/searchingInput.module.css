@@ -1,11 +1,12 @@
   
   .SearchingInput {
-    width: 50%;
+    flex: 0.6;
+    margin: 0px 20px;
     height: 32px;
     border-radius: 30px;
     display: flex;
     flex-flow: row;
-    background-color: #eee;
+    background-color: #fff;
   }
   
   .textbox{
@@ -31,6 +32,10 @@
 
 
   @media(max-width: 629px){
+    .SearchingInput{
+      flex: 0.9;
+    margin: 0px 10px;
+    }
     .textbox{
       font-size: 12px;
     }

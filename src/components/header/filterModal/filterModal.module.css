@@ -8,17 +8,19 @@
 .custom_dropdown {
     display: inline-block;
     vertical-align: middle;
-    margin: 5px;
+    margin-right: 10px;
+    outline: none;
   }
   
   .custom_dropdown select {
     outline: none;
+    border: none;
     border-radius: 15px;
     color: #777;
     background-color: white;
-    font-size: 14px;
+    font: 14px arial,sans-serif;
     width: 80px;
-    height: 30px;
+    height: 32px;
     padding-left: 1em;	
     margin: 0;
     text-overflow: '';
@@ -46,10 +48,7 @@
 
   @media(max-width: 629px){
     .custom_dropdown select{
-        width: 30px;
+        width: 32px;
         padding-left: 0em;
-    }
-    .custom_dropdown{
-    margin: 2px;
     }
   }
