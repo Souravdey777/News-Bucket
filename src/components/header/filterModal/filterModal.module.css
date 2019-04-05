@@ -15,11 +15,11 @@
     outline: none;
     border-radius: 15px;
     color: #777;
+    background-color: white;
     font-size: 14px;
     width: 80px;
     height: 30px;
     padding-left: 1em;	
-    border: 1px solid #ccc;
     margin: 0;
     text-overflow: '';
     -webkit-appearance: button;
@@ -33,24 +33,23 @@
   }
 
   .custom_dropdown select[disabled] {
-    color: rgba(0,0,0,.3);
   }
   
   .custom_dropdown select[disabled]::after {
-    color: rgba(0,0,0,.1);
   }
   
   .custom_dropdown::before {
-    background-color: rgba(0,0,0,.15);
   }
   
   .custom_dropdown::after {
-    color: rgba(0,0,0,.4);
   }
 
   @media(max-width: 629px){
     .custom_dropdown select{
         width: 30px;
         padding-left: 0em;
+    }
+    .custom_dropdown{
+    margin: 2px;
     }
   }
