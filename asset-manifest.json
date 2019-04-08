@@ -1,5 +1,5 @@
 {
-  "main.css": "/News-Bucket/static/css/main.ee351028.chunk.css",
+  "main.css": "/News-Bucket/static/css/main.62e0bd01.chunk.css",
   "main.js": "/News-Bucket/static/js/main.7f140962.chunk.js",
   "main.js.map": "/News-Bucket/static/js/main.7f140962.chunk.js.map",
   "runtime~main.js": "/News-Bucket/static/js/runtime~main.ad0a51bb.js",
@@ -7,9 +7,9 @@
   "static/js/2.ad0097d6.chunk.js": "/News-Bucket/static/js/2.ad0097d6.chunk.js",
   "static/js/2.ad0097d6.chunk.js.map": "/News-Bucket/static/js/2.ad0097d6.chunk.js.map",
   "index.html": "/News-Bucket/index.html",
-  "precache-manifest.9427f73d52986314fc3652db01aceea1.js": "/News-Bucket/precache-manifest.9427f73d52986314fc3652db01aceea1.js",
+  "precache-manifest.9a3cf8f3306b3c4f0f50135f72a5b83c.js": "/News-Bucket/precache-manifest.9a3cf8f3306b3c4f0f50135f72a5b83c.js",
   "service-worker.js": "/News-Bucket/service-worker.js",
-  "static/css/main.ee351028.chunk.css.map": "/News-Bucket/static/css/main.ee351028.chunk.css.map",
+  "static/css/main.62e0bd01.chunk.css.map": "/News-Bucket/static/css/main.62e0bd01.chunk.css.map",
   "static/media/NoNetwork.png": "/News-Bucket/static/media/NoNetwork.1673aea3.png",
   "static/media/SummarizeLogo.png": "/News-Bucket/static/media/SummarizeLogo.92357bf4.png",
   "static/media/githublogo.png": "/News-Bucket/static/media/githublogo.1b221b88.png"
