@@ -2,8 +2,8 @@
   text-align: center; 
   width: 100%;
   height: 100%;
-  background: rgb(148,241,124);
-  background: linear-gradient(110deg, rgba(148,241,124,1) 0%, rgba(251,255,205,1) 8%, rgba(214,202,255,1) 16%, rgba(204,242,255,1) 24%, rgba(255,207,233,1) 32%, rgba(255,214,180,1) 40%, rgba(255,210,210,1) 48%, rgba(211,255,248,1) 56%, rgba(201,190,255,1) 64%, rgba(255,197,217,1) 72%, rgba(128,255,147,1) 80%, rgba(255,189,207,1) 87%, rgba(255,177,177,1) 93%, rgba(139,242,255,1) 100%);
+  background: rgb(247,254,244);
+  background: linear-gradient(110deg, rgba(247,254,244,1) 0%, rgba(247,244,255,1) 8%, rgba(254,255,242,1) 16%, rgba(247,253,255,1) 23%, rgba(243,244,255,1) 31%, rgba(255,249,244,1) 39%, rgba(254,249,255,1) 46%, rgba(255,246,249,1) 54%, rgba(244,255,253,1) 62%, rgba(245,243,254,1) 69%, rgba(255,245,248,1) 77%, rgba(241,254,243,1) 86%, rgba(255,242,242,1) 93%, rgba(234,253,255,1) 100%);
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
