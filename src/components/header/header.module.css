@@ -46,7 +46,6 @@
 .bottomheader{
     border-top: 1px solid #0004;
     display: none;
-    padding: 12px 0px; 
     width: 100%;
     align-items:center;
     justify-content: center;
@@ -57,10 +56,10 @@
 
 @media(max-width: 629px){
     .header{
-        transition-duration: 0.4s;
         display: flex;
         flex-flow: column;
         height: 120px;
+        transition-duration: 0.4s;
     }
     .logoname{
         display: none;
@@ -70,6 +69,7 @@
     }
 
 .bottomheader{
+    transition-duration: 0.4s;
     display: unset;
 }
 }

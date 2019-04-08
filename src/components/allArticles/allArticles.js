@@ -24,11 +24,11 @@ class AllArticles extends React.Component {
       .get(`https://newsapi.org/v2/top-headlines?${this.state.forCountry}${this.state.toquery}${this.state.forCategory}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328`)
       .then(response => {
         const articles = response.data.articles;
-        console.log();
+        //console.log(articles);
         this.setState({ articles: articles, loadingcheck: true });
       })
       .catch(error => {
-        console.log(error);
+        //console.log(error);
         this.setState({ error: error });
       });
   }
@@ -40,16 +40,16 @@ class AllArticles extends React.Component {
   handleChange = (event) => {
     this.setState({ loadingcheck: false });
     this.setState({ query: event.target.value }, () => {
-      console.log(this.state.query);
+      //console.log(this.state.query);
       this.setState({ toquery: `&q=${this.state.query}` }, () => {
-        console.log(this.state.toquery);
+        //console.log(this.state.toquery);
         this.getNews();
       });
     });
 
     if (this.state.query === '') {
       this.setState({ toquery: '' }, () => {
-        console.log(this.state.url);
+        //console.log(this.state.url);
         this.getNews();
       });
     }
@@ -60,11 +60,11 @@ class AllArticles extends React.Component {
 
   handleCategoryDropdownChange = (event) => {
     this.setState({ loadingcheck: false });
-    console.log(event.target.value);
+    //console.log(event.target.value);
     this.setState({ CategoryValue: event.target.value }, () => {
-      console.log(this.state.CategoryValue);
+      //console.log(this.state.CategoryValue);
       this.setState({ forCategory: `&category=${this.state.CategoryValue}` }, () => {
-        console.log(this.state.forCategory);
+       //console.log(this.state.forCategory);
         this.getNews();
       });
     });
@@ -72,11 +72,11 @@ class AllArticles extends React.Component {
 
   handleCountryDropdownChange = (event) => {
     this.setState({ loadingcheck: false });
-    console.log(event.target.value);
+    //console.log(event.target.value);
     this.setState({ CountryValue: event.target.value }, () => {
-      console.log(this.state.CountryValue);
+      //console.log(this.state.CountryValue);
       this.setState({ forCountry: `country=${this.state.CountryValue}` }, () => {
-        console.log(this.state.forCountry);
+        //console.log(this.state.forCountry);
         this.getNews();
       });
     });
