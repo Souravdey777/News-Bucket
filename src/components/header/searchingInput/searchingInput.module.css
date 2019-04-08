@@ -33,7 +33,6 @@
 
   @media(max-width: 629px){
     .SearchingInput{
-      flex: 0.9;
     margin: 0px 10px;
     }
     .textbox{

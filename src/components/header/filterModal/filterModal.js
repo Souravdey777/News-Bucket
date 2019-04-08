@@ -63,7 +63,7 @@ const FilterModal = props => {
                     onChange={props.handleChangeCategory}>
                     {
                         Category.map(o =>
-                            (<option value={o.value}>{o.name}</option>
+                            (<option key={o.value} value={o.value}>{o.name}</option>
                             ))
                     }
                 </select>
@@ -74,7 +74,7 @@ const FilterModal = props => {
                     onChange={props.handleChangeCountry}>
                     {
                         Country.map(o =>
-                            (<option value={o.value}>{o.name}</option>
+                            (<option key={o.value} value={o.value}>{o.name}</option>
                             ))
                     }
                 </select>

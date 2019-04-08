@@ -36,12 +36,40 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.topheader{
+    width: 100%;
+    display:flex;
+    flex-flow: row;
+    align-items:center;
+    flex:1;
+}
+.bottomheader{
+    border-top: 1px solid #0004;
+    display: none;
+    padding: 12px 0px; 
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+}
+.topheaderFilter{
+    display: unset;
+}
 
 @media(max-width: 629px){
     .header{
+        transition-duration: 0.4s;
         display: flex;
+        flex-flow: column;
+        height: 120px;
     }
     .logoname{
         display: none;
     }
+    .topheaderFilter{
+        display: none;
+    }
+
+.bottomheader{
+    display: unset;
+}
 }

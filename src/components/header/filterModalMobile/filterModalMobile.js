@@ -1,7 +1,7 @@
 import React from 'react';
-import Classnames from './filterModal.module.css';
+import Classnames from './filterModalMobile.module.css';
 
-const FilterModal = props => {
+const FilterModalMobile = props => {
 
     const Category = [
         {
@@ -63,7 +63,7 @@ const FilterModal = props => {
                     onChange={props.handleChangeCategory}>
                     {
                         Category.map(o =>
-                            (<option value={o.value}>{o.name}</option>
+                            (<option key={o.value} value={o.value}>{o.name}</option>
                             ))
                     }
                 </select>
@@ -74,7 +74,7 @@ const FilterModal = props => {
                     onChange={props.handleChangeCountry}>
                     {
                         Country.map(o =>
-                            (<option value={o.value}>{o.name}</option>
+                            (<option key={o.value} value={o.value}>{o.name}</option>
                             ))
                     }
                 </select>
@@ -83,4 +83,4 @@ const FilterModal = props => {
     )
 }
 
-export default FilterModal;
+export default FilterModalMobile;

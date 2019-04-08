@@ -1,7 +1,8 @@
-.filters{
+
+  .filters{
   display: flex;
   flex-flow: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -18,8 +19,8 @@
     border-radius: 15px;
     color: #777;
     background-color: white;
-    font: 14px arial,sans-serif;
-    width: 100px;
+    font: 12px arial,sans-serif;
+    width: 120px;
     height: 32px;
     padding-left: 1em;	
     margin: 0;
@@ -32,12 +33,4 @@
     content: "";
     position: absolute;
     pointer-events: none;
-  }
-
-
-  @media(max-width: 629px){
-    .custom_dropdown select{
-        width: 32px;
-        padding-left: 0em;
-    }
   }
