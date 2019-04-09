@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### SUMMARIZE : THE NEWS APP
+Powered by- NewsAPI.org
+by - Sourav dey
+
+## Demo
+![alt text](src/assets/images/Summarize - souravdey777.github.io.png "Summarize: The News App")
+
+**[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
+
+## Todo
+
+Documentation
 
 ## Available Scripts
 
