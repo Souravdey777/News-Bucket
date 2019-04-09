@@ -1,9 +1,9 @@
 ### SUMMARIZE : THE NEWS APP
-Powered by- NewsAPI.org
+Powered by- NewsAPI.org<br/>
 by - Sourav dey
 
 ## Demo
-![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )
+<a href="https://souravdey777.github.io/News-Bucket/">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
 **[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 
 ## Todo
