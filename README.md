@@ -3,7 +3,7 @@ Powered by- NewsAPI.org<br/>
 by - Sourav dey
 
 ## Demo
-<a href="https://souravdey777.github.io/News-Bucket/">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
+<a href="https://souravdey777.github.io/News-Bucket/" target="_blank">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
 **[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 
 ## Todo
