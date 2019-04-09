@@ -3,9 +3,9 @@ Powered by- NewsAPI.org
 by - Sourav dey
 
 ## Demo
-![alt text](src/assets/images/Summarize - souravdey777.github.io.png "Summarize: The News App")
+**![alt tag](./src/assets/images/Summarize - souravdey777.github.io.png "Summarize: The News App")
 
-**[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
+[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 
 ## Todo
 
