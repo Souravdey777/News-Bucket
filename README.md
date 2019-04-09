@@ -3,7 +3,7 @@ Powered by- NewsAPI.org
 by - Sourav dey
 
 ## Demo
-![Screenshot](Screenshot.png)
+![Screenshot](Screenshot.png https://souravdey777.github.io/News-Bucket/)
 **[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 
 ## Todo
