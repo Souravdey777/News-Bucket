@@ -5,12 +5,16 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "fs": "0.0.1-security",
+    "install": "^0.12.2",
     "material-ui-search-bar": "^0.4.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-loading": "^2.0.3",
     "react-scripts": "2.1.8",
-    "react-stack-grid": "^0.7.1"
+    "react-stack-grid": "^0.7.1",
+    "reactjs-localstorage": "0.0.7",
+    "write-json-file": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

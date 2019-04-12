@@ -33,7 +33,7 @@ class Header extends Component {
     handleScroll = () => {
         lastScrollY = window.scrollY;
 
-        if (lastScrollY > 120 && window.innerWidth < 630) {
+        if (lastScrollY > 80 && window.innerWidth < 630) {
             this.header.current.style.transform = "translateY(-110%)";
             this.header.current.style.opacity = "0";
         }

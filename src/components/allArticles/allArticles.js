@@ -6,6 +6,8 @@ import ClassNames from "./allArticles.module.css";
 import ReactLoading from "react-loading";
 import NoNetwork from '../../assets/images/NoNetwork.png';
 import Header from '../header/header';
+import { reactLocalStorage } from 'reactjs-localstorage';
+
 class AllArticles extends React.Component {
   state = {
     articles: [],
@@ -14,22 +16,48 @@ class AllArticles extends React.Component {
     forCategory: '',
     forCountry: 'country=in',
     query: '',
-    loadingcheck: true,
-    CountryValue: 'in',
     CategoryValue: 'general',
+    CountryValue: 'in',
+    loadingcheck: true,
+    API_KEY: "7de4507ef58c4118be7684e320da6328"
   }
 
   getNews = () => {
     axios
-      .get(`https://newsapi.org/v2/top-headlines?${this.state.forCountry}${this.state.toquery}${this.state.forCategory}&pageSize=40&apiKey=7de4507ef58c4118be7684e320da6328`)
+      .get(`https://newsapi.org/v2/top-headlines?${this.state.forCountry}${this.state.toquery}${this.state.forCategory}&pageSize=40&apiKey=${this.state.API_KEY}`)
       .then(response => {
         const articles = response.data.articles;
-        //console.log(articles);
-        this.setState({ articles: articles, loadingcheck: true });
+        console.log(articles);
+        this.setState({ articles: articles, loadingcheck: true }, () => {
+          reactLocalStorage.remove('backupdata');
+          reactLocalStorage.remove('forCountry');
+          reactLocalStorage.remove('forCountry');
+          reactLocalStorage.remove('toquery');
+          reactLocalStorage.remove('CategoryValue');
+          reactLocalStorage.remove('CountryValue');
+          reactLocalStorage.remove('query');
+          reactLocalStorage.setObject('backupdata', articles);
+          reactLocalStorage.setObject('forCountry', this.state.forCountry);
+          reactLocalStorage.setObject('forCountry', this.state.forCategory);
+          reactLocalStorage.setObject('toquery', this.state.toquery);
+          reactLocalStorage.setObject('CountryValue', this.state.CountryValue);
+          reactLocalStorage.setObject('CategoryValue', this.state.CategoryValue);
+          reactLocalStorage.setObject('query', this.state.query);
+        });
       })
       .catch(error => {
         //console.log(error);
         this.setState({ error: error });
+        this.setState({ articles: reactLocalStorage.getObject('backupdata'), loadingcheck: true }, () => {
+          this.setState({
+            forCountry: reactLocalStorage.getObject('forCountry'),
+            forCategory: reactLocalStorage.getObject('forCategory'),
+            toquery: reactLocalStorage.getObject('toquery'),
+            CategoryValue:reactLocalStorage.getObject('CategoryValue'),
+          CountryValue:reactLocalStorage.getObject('CountryValue'),
+          query:reactLocalStorage.getObject('query')
+          });
+        });
       });
   }
 
@@ -64,7 +92,7 @@ class AllArticles extends React.Component {
     this.setState({ CategoryValue: event.target.value }, () => {
       //console.log(this.state.CategoryValue);
       this.setState({ forCategory: `&category=${this.state.CategoryValue}` }, () => {
-       //console.log(this.state.forCategory);
+        //console.log(this.state.forCategory);
         this.getNews();
       });
     });

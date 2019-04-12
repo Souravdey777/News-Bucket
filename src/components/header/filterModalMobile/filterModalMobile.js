@@ -56,7 +56,7 @@ const FilterModalMobile = props => {
         }
     ]
     return (
-        <div lassName={Classnames.filters}>
+        <div className={Classnames.filters}>
             <div className={Classnames.custom_dropdown}>
                 <select name="Category" id="Category"
                     value={props.selectedValueCategory}

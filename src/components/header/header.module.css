@@ -59,7 +59,7 @@
         display: flex;
         flex-flow: column;
         height: 120px;
-        transition-duration: 0.4s;
+        transition-duration: 0.3s;
     }
     .logoname{
         display: none;
@@ -69,7 +69,6 @@
     }
 
 .bottomheader{
-    transition-duration: 0.4s;
     display: unset;
 }
 }

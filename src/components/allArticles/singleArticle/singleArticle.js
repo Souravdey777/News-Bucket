@@ -19,7 +19,7 @@ class SingleArticle extends Component {
       <a className={ClassNames.a} href={this.props.articles.url}>
         <div className={ClassNames.Article}>
           <div>
-            {this.props.articles.urlToImage ? <img className={ClassNames.image} src={this.props.articles.urlToImage} alt=' ' title={this.props.articles.title} /> : null}
+            {this.props.articles.urlToImage ? <img className={ClassNames.image} src={this.props.articles.urlToImage} alt={this.props.articles.title} title={this.props.articles.title} /> : null}
           </div>
           <div>
             {this.props.articles.title ? <div className={ClassNames.Header}>{this.props.articles.title}</div> : null}
