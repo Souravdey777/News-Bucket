@@ -17,7 +17,7 @@ class AllArticles extends React.Component {
     forCountry: 'country=in',
     query: '',
     CategoryValue: 'general',
-    CountryValue: 'in',
+    CountryValue: '',
     loadingcheck: true,
     API_KEY: "7de4507ef58c4118be7684e320da6328"
   }
@@ -27,7 +27,7 @@ class AllArticles extends React.Component {
       .get(`https://newsapi.org/v2/top-headlines?${this.state.forCountry}${this.state.toquery}${this.state.forCategory}&pageSize=40&apiKey=${this.state.API_KEY}`)
       .then(response => {
         const articles = response.data.articles;
-        console.log(articles);
+        //console.log(articles);
         this.setState({ articles: articles, loadingcheck: true }, () => {
           reactLocalStorage.remove('backupdata');
           reactLocalStorage.remove('forCountry');
@@ -47,16 +47,16 @@ class AllArticles extends React.Component {
       })
       .catch(error => {
         //console.log(error);
-        this.setState({ error: error });
-        this.setState({ articles: reactLocalStorage.getObject('backupdata'), loadingcheck: true }, () => {
-          this.setState({
-            forCountry: reactLocalStorage.getObject('forCountry'),
-            forCategory: reactLocalStorage.getObject('forCategory'),
-            toquery: reactLocalStorage.getObject('toquery'),
-            CategoryValue:reactLocalStorage.getObject('CategoryValue'),
-          CountryValue:reactLocalStorage.getObject('CountryValue'),
-          query:reactLocalStorage.getObject('query')
-          });
+        this.setState({
+          error: error,
+          loadingcheck: true,
+          articles: reactLocalStorage.getObject('backupdata'),
+          forCountry: reactLocalStorage.getObject('forCountry'),
+          forCategory: reactLocalStorage.getObject('forCategory'),
+          toquery: reactLocalStorage.getObject('toquery'),
+          CategoryValue: reactLocalStorage.getObject('CategoryValue'),
+          CountryValue: reactLocalStorage.getObject('CountryValue'),
+          query: reactLocalStorage.getObject('query')
         });
       });
   }
@@ -66,48 +66,62 @@ class AllArticles extends React.Component {
   }
 
   handleChange = (event) => {
-    this.setState({ loadingcheck: false });
-    this.setState({ query: event.target.value }, () => {
-      //console.log(this.state.query);
-      this.setState({ toquery: `&q=${this.state.query}` }, () => {
-        //console.log(this.state.toquery);
-        this.getNews();
-      });
-    });
-
-    if (this.state.query === '') {
-      this.setState({ toquery: '' }, () => {
-        //console.log(this.state.url);
-        this.getNews();
-      });
+    if (this.state.error) {
+      alert('Connect to the Network')
     }
+    else {
+      this.setState({ loadingcheck: false });
+      this.setState({ query: event.target.value }, () => {
+        //console.log(this.state.query);
+        this.setState({ toquery: `&q=${this.state.query}` }, () => {
+          //console.log(this.state.toquery);
+          this.getNews();
+        });
+      });
 
+      if (this.state.query === '') {
+        this.setState({ toquery: '' }, () => {
+          //console.log(this.state.url);
+          this.getNews();
+        });
+      }
+    }
   }
 
 
 
   handleCategoryDropdownChange = (event) => {
-    this.setState({ loadingcheck: false });
-    //console.log(event.target.value);
-    this.setState({ CategoryValue: event.target.value }, () => {
-      //console.log(this.state.CategoryValue);
-      this.setState({ forCategory: `&category=${this.state.CategoryValue}` }, () => {
-        //console.log(this.state.forCategory);
-        this.getNews();
+    if (this.state.error) {
+      alert('Connect to the Network')
+    }
+    else {
+      this.setState({ loadingcheck: false });
+      //console.log(event.target.value);
+      this.setState({ CategoryValue: event.target.value }, () => {
+        //console.log(this.state.CategoryValue);
+        this.setState({ forCategory: `&category=${this.state.CategoryValue}` }, () => {
+          //console.log(this.state.forCategory);
+          this.getNews();
+        });
       });
-    });
+    }
   }
 
   handleCountryDropdownChange = (event) => {
-    this.setState({ loadingcheck: false });
-    //console.log(event.target.value);
-    this.setState({ CountryValue: event.target.value }, () => {
-      //console.log(this.state.CountryValue);
-      this.setState({ forCountry: `country=${this.state.CountryValue}` }, () => {
-        //console.log(this.state.forCountry);
-        this.getNews();
+    if (this.state.error) {
+      alert('Connect to the Network')
+    }
+    else {
+      this.setState({ loadingcheck: false });
+      //console.log(event.target.value);
+      this.setState({ CountryValue: event.target.value }, () => {
+        //console.log(this.state.CountryValue);
+        this.setState({ forCountry: `country=${this.state.CountryValue}` }, () => {
+          //console.log(this.state.forCountry);
+          this.getNews();
+        });
       });
-    });
+    }
   }
 
 
@@ -129,7 +143,7 @@ class AllArticles extends React.Component {
     return (
       <div className={ClassNames.body}>
         <Header
-          selectedValueCountry={this.props.CountryValue}
+          selectedValueCountry={this.state.CountryValue}
           handleChangeCountry={this.handleCountryDropdownChange}
           selectedValueCategory={this.state.CategoryValue}
           handleCategoryChange={this.handleCategoryDropdownChange}
