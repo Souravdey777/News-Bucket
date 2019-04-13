@@ -16,7 +16,7 @@ class SingleArticle extends Component {
   
   render() {
     return (
-      <a className={ClassNames.a} href={this.props.articles.url}>
+      <a className={ClassNames.a} target='_blank' href={this.props.articles.url}>
         <div className={ClassNames.Article}>
           <div>
             {this.props.articles.urlToImage ? <img className={ClassNames.image} src={this.props.articles.urlToImage} alt={this.props.articles.title} title={this.props.articles.title} /> : null}
