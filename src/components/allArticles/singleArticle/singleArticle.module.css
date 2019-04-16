@@ -10,7 +10,7 @@
 }
 
 .a{
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 .Article:hover{
@@ -60,6 +60,15 @@
     font-size: 12px;
     text-align: right;
 }
+.articlefooter img{
+    display: none;
+    margin: 0px 10px;
+}
+.articlefooter{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 
 @media(max-width: 629px){
     .Article{
@@ -74,5 +83,14 @@
     }
     .publishedAt{
         font-size: 10px;
+    }
+    .articlefooter{
+        justify-content: space-between;
+    }
+
+    .articlefooter img{
+        display: unset;
+        width:20px; 
+        height:20px;
     }
 }

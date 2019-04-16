@@ -1,7 +1,7 @@
 .App {
   text-align: center; 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: rgb(247,254,244);
   background: linear-gradient(110deg, rgba(247,254,244,1) 0%, rgba(247,244,255,1) 8%, rgba(254,255,242,1) 16%, rgba(247,253,255,1) 23%, rgba(243,244,255,1) 31%, rgba(255,249,244,1) 39%, rgba(254,249,255,1) 46%, rgba(255,246,249,1) 54%, rgba(244,255,253,1) 62%, rgba(245,243,254,1) 69%, rgba(255,245,248,1) 77%, rgba(241,254,243,1) 86%, rgba(255,242,242,1) 93%, rgba(234,253,255,1) 100%);
   -webkit-user-select: none;  /* Chrome all / Safari all */
