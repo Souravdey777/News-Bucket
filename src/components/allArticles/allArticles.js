@@ -31,7 +31,7 @@ class AllArticles extends React.Component {
         this.setState({ articles: articles, loadingcheck: true }, () => {
           reactLocalStorage.remove('backupdata');
           reactLocalStorage.remove('forCountry');
-          reactLocalStorage.remove('forCountry');
+          reactLocalStorage.remove('forCategory');
           reactLocalStorage.remove('toquery');
           reactLocalStorage.remove('CountryValue');
           reactLocalStorage.remove('CategoryValue');
