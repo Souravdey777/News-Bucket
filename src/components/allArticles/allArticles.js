@@ -47,6 +47,7 @@ class AllArticles extends React.Component {
       })
       .catch(error => {
         //console.log(error);
+      alert('Please connect internet for latest news articles')
         this.setState({
           error: error,
           loadingcheck: true,
