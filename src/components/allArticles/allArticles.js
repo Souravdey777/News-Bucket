@@ -38,7 +38,7 @@ class AllArticles extends React.Component {
           reactLocalStorage.remove('query');
           reactLocalStorage.setObject('backupdata', articles);
           reactLocalStorage.setObject('forCountry', this.state.forCountry);
-          reactLocalStorage.setObject('forCountry', this.state.forCategory);
+          reactLocalStorage.setObject('forCategory', this.state.forCategory);
           reactLocalStorage.setObject('toquery', this.state.toquery);
           reactLocalStorage.setObject('CountryValue', this.state.CountryValue);
           reactLocalStorage.setObject('CategoryValue', this.state.CategoryValue);
