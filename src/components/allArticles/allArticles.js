@@ -12,7 +12,7 @@ class AllArticles extends React.Component {
   state = {
     articles: [],
     error: false,
-    toquery: '',
+    toquery: null,
     forCategory: '',
     forCountry: 'country=in',
     query: '',
@@ -124,10 +124,14 @@ class AllArticles extends React.Component {
     }
   }
 
+  refresh(){
+    window.location.reload();
+  }
 
   render() {
     const articleState = this.state.articles;
-    let result = this.state.error ? <p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded</p> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
+    let result = this.state.error ? <div><p className={ClassNames.loadingpage}><img className={ClassNames.NoNetworkimage} src={NoNetwork} alt='Summerize' />News can't be loaded
+    <br/><span onClick={this.refresh} style={{color:"#ff3333"}}>Try Again</span></p></div> : <div className={ClassNames.loadingpage}>Loading...<br /><ReactLoading type="bubbles" color="#777" /></div>;
     if (articleState && articleState.length > 1 && this.state.loadingcheck) {
       result = <StackGrid
         columnWidth={300}
