@@ -20,8 +20,8 @@ class SingleArticle extends Component {
     if (navigator.share) {
       navigator.share({
           title: 'Summarize: The News App',
-          text: this.props.articles.title,
-          url: this.props.articles.url,
+          text: 'Check out this news website',
+          url: 'https://souravdey777.github.io/News-Bucket/',
       })
         .then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing', error));
