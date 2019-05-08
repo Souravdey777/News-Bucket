@@ -1,6 +1,7 @@
 .body{
     padding: 12px;
     padding-top: 60px;
+    min-height: 100vh;
 }
 .loadingpage{
     position: fixed;

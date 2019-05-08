@@ -141,7 +141,7 @@ class AllArticles extends React.Component {
       result = <p className={ClassNames.loadingpage}>No Search Result Found</p>
     }
     return (
-      <div className={ClassNames.body} style={{minHeight:`${window.innerHeight}px`}}>
+      <div className={ClassNames.body}>
         <Header
           selectedValueCountry={this.state.CountryValue}
           handleChangeCountry={this.handleCountryDropdownChange}
