@@ -1,6 +1,29 @@
-### SUMMARIZE : THE NEWS APP
+### 
 Powered by- NewsAPI.org<br/>
 by - Sourav dey
+Application Name: 
+### SUMMARIZE : THE NEWS APP
+Application type:
+## News Application
+Version:
+## 1.0
+Description:
+
+Screenshot:
+
+Features:
+	• 1
+	• 2
+	• 3
+
+
+Developed by:
+
+API used:
+
+Technology used:
+
+Dependencies:
 
 ## Demo
 <a href="https://souravdey777.github.io/News-Bucket/" target="_blank">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
