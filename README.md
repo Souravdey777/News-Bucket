@@ -1,3 +1,4 @@
+[![HitCount](http://hits.dwyl.com/Souravdey777/News-Bucket.svg)](http://hits.dwyl.com/Souravdey777/News-Bucket)
 ### 
 Powered by- NewsAPI.org<br/>
 by - Sourav dey
