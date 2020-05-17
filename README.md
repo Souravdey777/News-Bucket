@@ -29,6 +29,7 @@ A News Application developed with Reactjs using NewsAPI.org. Its is a responsive
 ### Getting Started
 
 Click the demo link or clone/download the repository on your local machine.
+
 	`git clone https://github.com/Souravdey777/News-Bucket.git`
 
 ##### Install dependencies
