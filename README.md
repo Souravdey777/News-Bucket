@@ -1,4 +1,5 @@
 [![HitCount](http://hits.dwyl.com/Souravdey777/News-Bucket.svg)](http://hits.dwyl.com/Souravdey777/News-Bucket)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ### 
 Powered by- NewsAPI.org<br/>
 by - Sourav dey
