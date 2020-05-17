@@ -1,6 +1,9 @@
 ### SUMMARIZE : THE NEWS APP
-#Application type:
-News Application
+<hr/>
+Application type:
+News Application<br/>
+Powered by- NewsAPI.org
+<br/>
 [![HitCount](http://hits.dwyl.com/Souravdey777/News-Bucket.svg)](http://hits.dwyl.com/Souravdey777/News-Bucket)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.png?id=gh&type=3d&v=1.0&x2=0)](https://badge.fury.io/gh/Souravdey777%2FNews-Bucket)
@@ -8,7 +11,6 @@ News Application
 <a href="https://souravdey777.github.io/News-Bucket/" target="_blank">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
 **[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 ### 
-Powered by- NewsAPI.org<br/>
 by - Sourav dey
 Application Name: 
 
