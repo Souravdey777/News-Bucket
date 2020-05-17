@@ -15,7 +15,7 @@ A News Application developed with Reactjs using NewsAPI.org. Its is a responsive
 **[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 <a href="https://souravdey777.github.io/News-Bucket/" target="_blank">
 	<p align="center">
-  		<img src="./Screenshot.png" width="300" title="SUMMARIZE : THE NEWS APP" alt="SUMMARIZE : THE NEWS APP">
+  		<img src="./Screenshot.png" width="600" title="SUMMARIZE : THE NEWS APP" alt="SUMMARIZE : THE NEWS APP">
 	</p>
 </a>
 
@@ -23,8 +23,11 @@ A News Application developed with Reactjs using NewsAPI.org. Its is a responsive
 ### Features
 
 	• Progressive Web Application
+	
 	• Offline Access from prefetched data
+	
 	• Responsive Design
+	
 	• News Filtering Options
 
 
