@@ -1,6 +1,5 @@
 ## SUMMARIZE : THE NEWS APP
 
-----
 
 [![HitCount](http://hits.dwyl.com/Souravdey777/News-Bucket.svg)](http://hits.dwyl.com/Souravdey777/News-Bucket)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,13 +8,15 @@
 ### Description
 
 A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is a developed considering the Google's concept of Progress Web Application.
+
 Powered by- NewsAPI.org
+
 Developed by - Sourav Dey
 
 
 ### Demo
 
-####**[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
+**[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
 <a href="https://souravdey777.github.io/News-Bucket/" target="_blank">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
 
 
