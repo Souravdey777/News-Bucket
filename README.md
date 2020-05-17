@@ -6,7 +6,7 @@
 
 ### Description
 
-	A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on 		any device and it is a developed considering the Google's concept of Progressive Web Application.
+A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is a developed considering the Google's concept of Progressive Web Application.
 
 
 ### Demo
@@ -29,14 +29,15 @@
 ### Getting Started
 
 Click the demo link or clone/download the repository on your local machine.
+	`git clone https://github.com/Souravdey777/News-Bucket.git`
 
 ##### Install dependencies
 
-`yarn install`
+	`npm install` or `yarn install`
 
 ##### Run Snap Shot from the root directory.
 
-`yarn start`
+	`npm start` or `yarn start`
 
 ### Contributing
 
