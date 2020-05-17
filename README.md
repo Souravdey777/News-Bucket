@@ -6,7 +6,7 @@
 
 ### Description
 
-A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is a developed considering the Google's concept of Progressive Web Application.
+	A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is a developed considering the Google's concept of Progressive Web Application.
 
 
 ### Demo
