@@ -6,28 +6,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.png?id=gh&type=3d&v=1.0&x2=0)](https://badge.fury.io/gh/Souravdey777%2FNews-Bucket)
 
-## Description
+#### Description
 A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is a developed considering the Google's concept of Progress Web Application.
 Powered by- NewsAPI.org
 Developed by - Sourav Dey
 
-## Demo
+#### Demo
 *[Click here for demo](https://souravdey777.github.io/News-Bucket/)*
 <a href="https://souravdey777.github.io/News-Bucket/" target="_blank">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
 
-### 
-by - Sourav dey
-Application Name: 
-
-Description:
-
-Screenshot:
 
 Features:
 	• 1
 	• 2
 	• 3
-
 
 Developed by:
 
