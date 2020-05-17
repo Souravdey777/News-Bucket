@@ -1,8 +1,9 @@
 ## SUMMARIZE : THE NEWS APP
 
-[![HitCount](http://hits.dwyl.com/Souravdey777/News-Bucket.svg)](http://hits.dwyl.com/Souravdey777/News-Bucket)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.png?id=gh&type=3d&v=1.0&x2=0)](https://badge.fury.io/gh/Souravdey777%2FNews-Bucket)
+[![HitCount](http://hits.dwyl.com/Souravdey777/News-Bucket.svg?style=flat)](http://hits.dwyl.com/Souravdey777/News-Bucket)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](https://opensource.org/licenses/MIT)
+[![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.png?&v=1.0&style=flat)](https://badge.fury.io/gh/Souravdey777%2FNews-Bucket)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Souravdey777/News-Bucket/issues)
 
 ### Description
 
