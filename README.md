@@ -9,7 +9,8 @@
 
 A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is developed considering the Google's concepts of Progressive Web Applications.
 	
-	This website is not currently available as the NewsAPI.org is no more free in hosted websites. It will only be available in localhost. It can still can be downloaded and used in localhost.(Development mode). You can
+	This website is not currently available as the NewsAPI.org is no more free in hosted websites.
+	It will only be available in localhost. It can still can be downloaded and used in localhost.(Development mode).
 
 ### Demo
 
