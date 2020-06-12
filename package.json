@@ -4,12 +4,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "fs": "0.0.1-security",
     "install": "^0.12.2",
     "material-ui-search-bar": "^0.4.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-loading": "^2.0.3",
     "react-scripts": "2.1.8",
     "react-stack-grid": "^0.7.1",
@@ -34,6 +34,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.2.0"
   }
 }
