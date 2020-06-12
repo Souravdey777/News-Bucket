@@ -7,13 +7,17 @@
 
 ### Description
 
-A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is a developed considering the Google's concept of Progressive Web Application.
+A News Application developed with Reactjs using NewsAPI.org. Its is a responsive website which is designed to be supported on any device and it is developed considering the Google's concepts of Progressive Web Applications.
 
 
 ### Demo
 
 **[Click here for demo](https://souravdey777.github.io/News-Bucket/)**
-<a href="https://souravdey777.github.io/News-Bucket/" target="_blank">![Screenshot](Screenshot.png "SUMMARIZE : THE NEWS APP" )</a>
+<a href="https://souravdey777.github.io/News-Bucket/" target="_blank">
+	<p align="center">
+  		<img src="./Screenshot.png" width="700" title="SUMMARIZE : THE NEWS APP" alt="SUMMARIZE : THE NEWS APP">
+	</p>
+</a>
 
 
 ### Features
@@ -21,9 +25,9 @@ A News Application developed with Reactjs using NewsAPI.org. Its is a responsive
 	• Progressive Web Application
 	
 	• Offline Access from prefetched data
-
+	
 	• Responsive Design
-
+	
 	• News Filtering Options
 
 
