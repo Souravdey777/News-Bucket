@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "fs": "0.0.1-security",
     "install": "^0.12.2",
     "material-ui-search-bar": "^0.4.2",
